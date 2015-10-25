@@ -1,64 +1,67 @@
 #include <iostream>
-/* "Íîðìàëüíûé" êàëüêóëÿòîð. 
-Îáðàáîòêà ñèòóàöèè äåëåíèÿ íà 0. Ðåçóëüòàò âû÷èñëåíèé îñòàåòñÿ êàê òåêóùåå çíà÷åíèå. 
-Åñëè âìåñòî îïåðàöèè ââåñòè ñèìâîë ’c’, òî êàëüêóëÿòîð ñáðàñûâàåòñÿ â íà÷àëî, 
-ïðè ââîäå ñèìâîëà ’e’ âìåñòî îïåðàöèè êàëüêóëÿòîð çàâåðøàåò ðàáîòó (exit).*/
+/* "ÐÐ¾Ñ€Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹" ÐºÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€.
+ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ° ÑÐ¸Ñ‚ÑƒÐ°Ñ†Ð¸Ð¸ Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð½Ð° 0. Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ð¹ Ð¾ÑÑ‚Ð°ÐµÑ‚ÑÑ ÐºÐ°Ðº Ñ‚ÐµÐºÑƒÑ‰ÐµÐµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ.
+Ð•ÑÐ»Ð¸ Ð²Ð¼ÐµÑÑ‚Ð¾ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¸ Ð²Ð²ÐµÑÑ‚Ð¸ ÑÐ¸Ð¼Ð²Ð¾Ð» â€™câ€™, Ñ‚Ð¾ ÐºÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€ ÑÐ±Ñ€Ð°ÑÑ‹Ð²Ð°ÐµÑ‚ÑÑ Ð² Ð½Ð°Ñ‡Ð°Ð»Ð¾,
+Ð¿Ñ€Ð¸ Ð²Ð²Ð¾Ð´Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð° â€™eâ€™ Ð²Ð¼ÐµÑÑ‚Ð¾ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¸ ÐºÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€ Ð·Ð°Ð²ÐµÑ€ÑˆÐ°ÐµÑ‚ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ (exit).*/
 using namespace std;
 int main()
-{	char operation = 0;
-	int num1=0, num2=0, result = 0, i = 0;
-  
+{
+	char operation = 0;
+	int num1 = 0, num2 = 0, result = 0, i = 0;
+
 	while (1 > 0) {
 		if (i == 0) {
-	  cout << "Enter 1st number: ";
-	  cin >> num1;
-	  cout << "Choose operation: (+), (-), (/), (*), (e), (c): ";
-	  cin >> operation;
-	    if (operation != 'e')
-	  {
-		  cout << "Enter 2nd number: ";
-		  cin >> num2;
+			cout << "Enter 1st number: ";
+			cin >> num1;
+			cout << "Choose operation: (+), (-), (/), (*), (e), (c): ";
+			cin >> operation;
+			if (operation != 'e')
+			{
+				cout << "Enter 2nd number: ";
+				cin >> num2;
 
-	  calculator:
-		  switch (operation)
-		  {
-		  case '+':
-			  result = num1 + num2;
-			  cout << num1 << " + " << num2 << " = " << result << endl;
-			  num1 = result;
-			  i = 1;
-			  break;
-		  case '-':
-			  result = num1 - num2;
-			  cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
-			  num1 = result;
-			  i = 1;
-			  break;
-		  case '/':
-			  if (num2 == 0)
-				  cout << "Hands up you're under arrest. Division by zero is illegal." << endl;
-			  else
-				  result = num1 / num2;
-			  cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
-			  num1 = result;
-			  i = 1;
-			  break;
-		  case '*':
-			  result = num1*num2;
-			  cout << num1 << " * " << num2 << " = " << num1*num2 << endl;
-			  num1 = result;
-			  i = 1;
-			  break;
-		  case 'e':
-			  cout << "Thanks for using! ";
-			  system("pause");
-			  return 0;
-		  case 'c': i = 0;
-			  cout << "Cleaned" << endl;
-			  break;
-		  default:
-			  cout << "Error" << endl; }
-		}}
+			calculator:
+				switch (operation)
+				{
+				case '+':
+					result = num1 + num2;
+					cout << num1 << " + " << num2 << " = " << result << endl;
+					num1 = result;
+					i = 1;
+					break;
+				case '-':
+					result = num1 - num2;
+					cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+					num1 = result;
+					i = 1;
+					break;
+				case '/':
+					if (num2 == 0)
+						cout << "Hands up you're under arrest. Division by zero is illegal." << endl;
+					else
+						result = num1 / num2;
+					cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
+					num1 = result;
+					i = 1;
+					break;
+				case '*':
+					result = num1*num2;
+					cout << num1 << " * " << num2 << " = " << num1*num2 << endl;
+					num1 = result;
+					i = 1;
+					break;
+				case 'e':
+					cout << "Thanks for using! ";
+					system("pause");
+					return 0;
+				case 'c': i = 0;
+					cout << "Cleaned" << endl;
+					break;
+				default:
+					cout << "Error" << endl;
+				}
+			}
+		}
 		else {
 			cout << "Chose operation: (+), (-), (/), (*), (e), (c):  ";
 			cin >> operation;
@@ -69,7 +72,7 @@ int main()
 			goto calculator;
 		}
 	}
- 
-   system("pause");
-   return 0;
+
+	system("pause");
+	return 0;
 }
