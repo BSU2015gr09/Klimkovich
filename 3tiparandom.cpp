@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	int mas[40];
-	int a = 35324, c=269271, m = 565184;
+	int a = 4096, c = 150889, m = 714025;
 	mas[0] = 1;
 	cout << mas[0] << " is the first number" << endl;
 	for (int n = 1; n < 40; n++) {
