@@ -69,7 +69,7 @@ int main()
 				cout << "Enter 2nd number ";
 				cin >> num2;
 			}
-			goto calculator;
+			goto calculator;// круть!!!!
 		}
 	}
 

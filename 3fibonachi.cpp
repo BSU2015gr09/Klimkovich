@@ -4,13 +4,13 @@
 using namespace std;
 int main()
 {
-	float mas[40], pprev = 0, prev = 0;
+	float mas[40], pprev = 0, prev = 0;// зачем массив?????
 	int i;
 	cout << "  Next:Privios    |    Privios:Next " << endl;
 	cout << "" << endl;
 	mas[0] = 1;
 	mas[1] = 1;
-	for (i = 2; i < 40; i++)
+	for (i = 2; i < 40; i++)// почему только 40???
 	{
 		mas[i] = mas[i - 1] + mas[i - 2];
 		pprev = mas[i] / mas[i - 1];
