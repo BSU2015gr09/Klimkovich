@@ -1,3 +1,4 @@
+//алгоритм XORShift генерации псевдослучайных чисел с использованием XOR 
 #include <iostream>
 using namespace std;
 void XOR(int &x) 
